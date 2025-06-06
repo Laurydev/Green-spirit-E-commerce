@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "img/Ethiopian-Origin.png",
+    "name": "Ethiopian Origin",
+    "description": "Floral and citrus notes.<br>Perfect for filtered brewing methods.",
+    "type": "Filtered",
+    "price": "12.00"
+  },
+  {
+    "id": 2,
+    "image": "img/House-Blend.png",
+    "name": "House Blend",
+    "description": "Balanced, medium-bodied with chocolate notes.<br> Ideal for everyday use.",
+    "type": "Blend",
+    "price": "10.00"
+  },
+  {
+    "id": 3,
+    "image": "img/Classic-Colombian.png",
+    "name": "Classic Colombian",
+    "description": "Sweet with hints of caramel and red fruits.<br>Versatile and smooth.",
+    "type": "Single Origin",
+    "price": "11.00"
+  },
+  {
+    "id": 4,
+    "image": "img/Intense-Roast.png",
+    "name": "Intense Roast",
+    "description": "Deep, bold flavors with a long finish.<br>Perfect for espresso.",
+    "type": "Espresso",
+    "price": "13.00"
+  },
+  {
+    "id": 5,
+    "image": "img/Natural-Decaf.png",
+    "name": "Natural Decaf",
+    "description": "Decaffeinated without chemicals, clean and smooth.<br>Ideal for evening coffee.",
+    "type": "Decaf",
+    "price": "12.50"
+  },
+  {
+    "id": 6,
+    "image": "img/Special-Cold-Brew.png",
+    "name": "Special Cold Brew",
+    "description": "Beans made for cold brew.<br>Smooth with cocoa undertones.",
+    "type": "Cold Brew",
+    "price": "14.00"
+  }
+]
