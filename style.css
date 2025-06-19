@@ -15,7 +15,7 @@
   right: 20px;
   width: 70px;
   height: 70px;
-  background: #693d29;
+  background: #79907d;
   color: #fff;
   border: none;
   font-size: 22px;
@@ -48,7 +48,7 @@
   padding: 20px;
   width: 90%;
   max-width: 400px;
-  margin: 80px auto;
+  margin: 10px auto;
   position: relative;
 }
 
@@ -61,11 +61,13 @@
 }
 
 .divProductsModal {
+  background-color: #b8d8be;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  margin: 0 30px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 30px;
   font-size: 14px;
   font-weight: bold;
 }
@@ -74,6 +76,7 @@
   flex-direction: column;
   align-items:start;
   gap: 5px;
+
 }
 .btns-modal{
   display: flex;
@@ -83,19 +86,24 @@
   height: 30px;
   width: 30px;
   font-weight: bold;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
   margin: 0 7px;
 
 }
 .img-modal {
   height: 50px;
+  border-radius: 10px;
 }
 
 .totalModal {
- text-align: right;
+  display: flex;
+  justify-content: space-between;
 }
 .totalModal button{
   cursor: pointer;
-  background-color: #c8a580;
+  background-color: #b8d8be;
   border:none;
   border-radius: 10px;
   width: 140px;
@@ -103,18 +111,18 @@
   color: #010101;
   font-size: 15px;
   font-weight: bold;
-  margin: 10px 20px;
+  margin: 20px 10px;
   transition: 1s;
 }
 .totalModal button:hover{
   transition: 1s;
   color: #ffffff;
-  background-color: #653924;
+  background-color: #507357;
 }
 .totalModal p {
-  padding-top: 20px;
-  margin: 0 30px;
-  font-size: 18px;
+  padding-top: 30px;
+  margin: 0 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 /* ========== Modal checkout ========*/
@@ -122,56 +130,87 @@
   text-align: center;
   margin: 30px 0;
 }
+.checkout-title hr{
+  color: #b8d8be;
+
+}
 .chekoutListProducts{
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
+  background-color: #b8d8be;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
 }
 .ckeckout-total{
-  text-align: end;
-  margin: 30px 0 40px 0;
+  display: flex;
+  justify-content: space-between;  
+  background-color: #b8d8be;
+  padding: 10px ;
+  border-radius: 10px;
+  margin: 30px 0;
 }
-.divCheakoutsBtns{
-  text-align: end;
-}
+
 .divCheakoutsBtns div{
-  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 .divCheakoutsBtns input{
   text-align: center;
   height: 30px;
-  border-radius: 15px;
+  width: 150px;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 10px;
   border:none;
   background-color: #e8e8e8;
 }
 #apply-coupon-btn {
   cursor: pointer;
   border: none;
-  height: 25px;
-  width: 100px;
-  border-radius: 10px;
+  height: 30px;
+  width: 120px;
+  margin: 0 10px;
+  border-radius: 8px;
   text-align: center;
   font-weight: 500;
-  background-color: #6bf0ac;
+  background-color: #b8d8be;
 }
 #confirm-order-btn{
   transition: 1s;
   cursor: pointer;
   border: none;
-  height: 25px;
-  width: 150px;
-  border-radius: 10px;
+  height: 35px;
+  width: 300px;
+  border-radius: 8px;
   text-align: center;
   font-weight: bold;
-  background-color: #6bf0ac;
+  background-color: #b8d8be;
 }
 #confirm-order-btn:hover{
+  background-color: #507357;
+  color: #e8e8e8;
   width: 170px;
+}
+.cuponApply{
+  display: flex;
+  flex-direction:column;
+  background-color: #d8ffdf;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
 /* ========== HEADER ========== */
 header {
   width: 100%;
   height: 100vh;
+  background-image: url(https://wallpapersok.com/images/hd/tropical-plants-and-leaves-vector-art-891oig2hf9f1novi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .logo {
@@ -207,14 +246,6 @@ ul li:hover {
   letter-spacing: 3px;
 }
 
-.image {
-  height: 550px;
-  background-image: url(img/coffeecup.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
 /* ========== MAIN SECTION ========== */
 main {
   display: flex;
@@ -224,39 +255,16 @@ main {
 
 .about {
   font-style: italic;
-  padding: 30px 500px;
+  padding: 100px 500px;
   text-align: center;
-  background-color: #DCC6AE;
-  color: #653924;
+  background-color: #b8d8be;
+  color: #333;
   font-weight: 500;
 }
-
-.steps {
-  background-color: #DCC6AE;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: #653924;
+.about img{
+  width: 200px;
+  height: 200px;
 }
-
-.steps div {
-  margin: 20px 0px;
-}
-
-.steps img {
-  width: 250px;
-  height: 250px;
-}
-
-.stepsTitle {
-  color: #653924;
-  font-weight: bold;
-}
-
-.steps p {
-  font-style: italic;
-}
-
 .titleProducts {
   font-size: 18px;
   text-align: center;
@@ -282,7 +290,7 @@ main {
 .btnAddCart {
   cursor: pointer;
   font-weight: bold;
-  background-color: #DCC6AE;
+  background-color: #b8d8be;
   border: none;
   margin: 20px 0;
   height: 30px;
@@ -292,14 +300,14 @@ main {
 }
 .btnAddCart:hover {
   transition: 1s;
-  background-color: #653924;
+  background-color: #507357;
   color: #fff;
 }
 
 /* ========== FOOTER ========== */
 footer {
   height: 500px;
-  background-color: #DCC6AE;
+  background-color: #b8d8be;;
 }
 
 .footer {
@@ -336,8 +344,11 @@ footer {
   
 
 
+
+
+
 /* ========== RESPONSIVE DESIGN ========== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
 
 /* ========== FLOATING CART BUTTON ========== */
 
@@ -365,48 +376,58 @@ footer {
   }
 
 /* ======= modal==========*/
-
-.cart-modal {
-
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-}
-
 .cart-content {
-  max-width: 350px;
+  max-width: 300px;
 }
 .divProductsModal {
-  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
   font-size: 14px;
   font-weight: bold;
 }
 .modal-info {
+  background-color: #b8d8be;
+  padding: 15px 0px;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
-  gap: 5px;
-}
-.modal-info p{
-  padding-top: 23px;
-  margin: 0 2px;
+  justify-content: space-around;
+  margin: 0 10px;
 }
 .btns-modal{
   display: flex;
-  flex-direction: row;
-  align-items: end;
-  padding-left: 50px;
-
+  padding-top: 0px;
+  gap: 15px;
+  margin: -35px 0 0 70px;
 }
 .btn-plus, .btn-minus, .btn-remove{
   height: 25px;
   width: 25px;
   font-weight: bold;
-  margin: 0 10px;
+  margin: 0;
+}
+.totalModal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*========checkout ============*/
+
+.divCheakoutsBtns input{
+  height: 40px;
+  width: 110px;
+
+}
+#apply-coupon-btn {
+  height: 40px;
+  width: 120px;
+  padding: 0 10px;
+}
+#confirm-order-btn{
+  width: 230px;
 }
 
 
@@ -414,37 +435,9 @@ footer {
 
 .about {
   font-style: italic;
-  padding: 20px 60px;
+  padding: 100px 60px 50px 60px;
   font-size: 14px;
   font-weight: 500;
-}
-
-.steps {
-  background-color: #DCC6AE;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: #653924;
-}
-
-.steps div {
-  padding: 20px 0;
-  font-size: 10px;
-  margin: 0px 0px;
-}
-
-.steps img {
-  width: 100px;
-  height: 100px;
-}
-
-.stepsTitle {
-  color: #653924;
-  font-weight: bold;
-}
-
-.steps p {
-  font-style: italic;
 }
 
 .shop {

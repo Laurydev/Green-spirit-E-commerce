@@ -23,7 +23,7 @@ function renderProducts(data) {
     productDiv.innerHTML = `
       <img src="${product.image}" alt="${product.name}" class="product-image" />
       <h3>${product.name}</h3>
-      <p><strong>Type:</strong> ${product.type}</p><br>
+      <p>${product.type}</p><br>
       <p><strong> $ ${product.price}</strong></p>
       <button class="btnAddCart" data-id="${product.id}">ADD TO CART</button>
     `;
@@ -55,7 +55,7 @@ function renderModal() {
     item.innerHTML = `  <div class="modal-info">
                           <img class="img-modal" src="${product.image}" alt="">
                           <p>${product.name}</p>
-                          <p>$ ${product.price}</p>
+                          <p>$ ${product.price} ea.</p>
                         </div>
                         <div class="btns-modal">
                           <button class="btn-minus" data-id="${product.id}">-</button>
@@ -69,8 +69,8 @@ function renderModal() {
   // Si querés también mostrar el total al final
   const total = productsCart.reduce((acc, prod) => acc + prod.price * prod.quantity, 0);  
   const totalElement = document.createElement("div");
-  totalElement.innerHTML = `<div class="totalModal">
-                              <hr>
+  totalElement.innerHTML = `<br><hr>
+                            <div class="totalModal">
                               <p> Total: $${total.toFixed(2)}</p>
                               <button id="confirmOrder-btn">Confirm Order</button>
                             </div>
@@ -158,8 +158,10 @@ function showCheckoutSummary() {
   // total without discount
   const total = productsCart.reduce((acc, prod) => acc + prod.price * prod.quantity, 0);
   const totalElement = document.createElement("div");
-  totalElement.innerHTML = `<div class="ckeckout-total">
-                              <hr><strong>Total: $${total.toFixed(2)}</strong>
+  totalElement.innerHTML = `<br><hr>
+                            <div class="ckeckout-total">
+                              <p><strong>Total:</strong></p>
+                              <strong>$${total.toFixed(2)}</strong>
                             </div>`
   summaryContainer.appendChild(totalElement);
 
@@ -167,7 +169,7 @@ function showCheckoutSummary() {
   const divCoupon = document.createElement("div");
   divCoupon.classList.add("divCheakoutsBtns");
   divCoupon.innerHTML= `<div>
-                          <input type="text" id="coupon-code" name="name" placeholder="Enter coupon code" />
+                          <input type="text" id="coupon-code" name="name" placeholder="Coupon code" />
                           <button id="apply-coupon-btn">Apply Coupon</button>          
                         </div>
                         <div id="info-coupon"></div>
@@ -182,7 +184,7 @@ function applyCoupon(e) {
   const input = document.getElementById("coupon-code");
   const couponCode = input.value.trim().toUpperCase();
 
-  const validCoupon = "CAFECITO";
+  const validCoupon = "PLANTITA";
   const discountRate = 0.10;
 
   const summaryContainer = document.getElementById("checkout-summary");
@@ -195,13 +197,12 @@ function applyCoupon(e) {
     const total = productsCart.reduce((acc, p) => acc + p.price * p.quantity, 0);
     const discounted = (total * (1 - discountRate)).toFixed(2);
 
-    infocoupon.innerHTML = `✅ Coupon applied! <br>
-                            <strong> New total: $${discounted}</strong>`;
-    infocoupon.style.color = "green";
-
+    infocoupon.innerHTML = `<div class="cuponApply">
+                              <p>✅ <br>Coupon applied! <br><p>
+                              <p><strong>New total: $${discounted}</strong></p>`;
+                    
     input.style.display = "none";
     e.target.style.display = "none";
-
   } else {
     infocoupon.innerHTML = `invalid coupon`    
     infocoupon.style.color = "#FF5656";
@@ -217,7 +218,7 @@ function showFinalAlerts(){
   let timerInterval;
     Swal.fire({
       title: "Processing your order...",
-      html: "Please wait a moment ☕",
+      html: "Please wait a moment ",
       timer: 2000,
       timerProgressBar: true,
       didOpen: () => {
@@ -237,7 +238,7 @@ function showFinalAlerts(){
       if (result.dismiss === Swal.DismissReason.timer) {
         Swal.fire({
           title: "Order confirmed!",
-          text: "Thank you, enjoy your coffee! ☕",
+          text: "🌿 Thank you! 🌿",
           icon: "success",
           draggable: true
         });
@@ -313,7 +314,7 @@ document.addEventListener("click", e => {
       gravity: "bottom", 
       position: "right", 
       style: {
-        background: "linear-gradient(to right, #693d29,rgb(197, 119, 83))",
+        background: "linear-gradient(to right,rgb(87, 163, 101),rgb(46, 122, 73))",
       },
       }).showToast();
   }
@@ -367,8 +368,8 @@ document.addEventListener("click", e => {
 // ==========================================
 setTimeout(() => {
   Swal.fire({
-    title: "🎟️ CAFECITO 🎟️ ",
-    text: "10% OFF COUPON",
+    title: "🌿 COUPON: PLANTITA 🌿",
+    text: "10% OFF",
     footer: 'Enter the coupon at checkout'
   });
 }, 5000);
