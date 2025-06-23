@@ -368,8 +368,8 @@ document.addEventListener("click", e => {
 // ==========================================
 setTimeout(() => {
   Swal.fire({
-    title: "🌿 COUPON: PLANTITA 🌿",
-    text: "10% OFF",
+    title: "COUPON 10% OFF",
+    text: "🌿 PLANTITA 🌿",
     footer: 'Enter the coupon at checkout'
   });
 }, 5000);

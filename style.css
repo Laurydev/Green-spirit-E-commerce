@@ -45,7 +45,7 @@
   overflow-y: auto;
   background: white;
   border-radius: 12px;
-  padding: 20px;
+  padding: 10px;
   width: 90%;
   max-width: 400px;
   margin: 10px auto;
@@ -377,17 +377,18 @@ footer {
 
 /* ======= modal==========*/
 .cart-content {
-  max-width: 300px;
+  max-width: 350px;
 }
 .divProductsModal {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  font-size: 14px;
+  padding-top: 0px;
+  font-size: 12px;
   font-weight: bold;
 }
 .modal-info {
+  font-size: 12px;
   background-color: #b8d8be;
   padding: 15px 0px;
   border-radius: 10px;
@@ -399,7 +400,7 @@ footer {
 .btns-modal{
   display: flex;
   padding-top: 0px;
-  gap: 15px;
+  gap:10px;
   margin: -35px 0 0 70px;
 }
 .btn-plus, .btn-minus, .btn-remove{
